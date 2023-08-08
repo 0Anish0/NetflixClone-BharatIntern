@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(/Asset/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.logo {
+    width: 10rem;
+    opacity: 90%;
+    cursor: pointer;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 17px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+select {
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.contant{
+    display: flex;
+    flex-direction: column;
+    margin-top: 7em;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-header{
+    margin-top: 1rem;
+}
+
+.contant h1{
+    font-size: 3rem;
+    margin: 0.28rem;
+}
+
+.contant p{
+    font-size: 1.7rem;
+    margin: 0.28rem;
+}
+
+.tv{
+    display: flex;
+    padding: 3rem;
+    margin: auto;
+    align-items: center;
+}
+
+.mobile{
+    display: flex;
+    padding: 3rem;
+    margin: auto;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.row{
+    display: flex;
+    padding: 3rem;
+    margin: auto;
+    align-items: center;
+}
+
+.row img{
+    width: 33em;
+    margin: 3em;
+}
+
+.row .detail{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row .detail h1{
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: bolder;
+}
+
+.row .detail p{
+    font-size: 1.5em;
+    font-weight: bolder;
+    max-width: 50%;
+    margin-left: 44px;
+}
+
+.kid-section{
+    display: flex;
+    padding: 3rem;
+}
+
+.kid-section img{
+    width: 80%;
+}
+
+.kid-section .detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.kid-section .detail h1{
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.kid-section .detail p{
+    font-size: 1.5em;
+    max-width: 55%;
+}
+
+.FAQ {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.FAQ h2 {
+    padding-top: 1em;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.questions {
+    margin: 33px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.questions li {
+    list-style: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.questions li label {
+    display: flex;
+    align-items: center;
+    background: #303030;
+    margin-bottom: 2px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 20px;
+    font-size: 18px;
+}
+
+label::after {
+    content: '+';
+    font-size: 30px;
+    right: 20px;
+    transition: transfrom 0.5s;
+    position: absolute;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.questions .answer {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    transition: max-heigth 0.5s, padding 0.5s;
+    max-height: 0;
+    overflow: hidden;
+}
+
+
+.questions input[type="radio"]:checked+label+.answer {
+    padding: 30px 20px;
+    max-height: 600px;
+    line-height: 2;
+}
+
+.questions input[type="radio"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+.FAQ .email {
+    max-width: 600px;
+    margin: 15px auto 50px;
+}
+
+.FAQ small {
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.email input {
+    height: 2.2em;
+    background: rgb(60, 56, 56);
+    color: #fff;
+    font-size: 14px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+
+.footer {
+    padding: 50px 10% 7px;
+    border-top: 6px solid #333;
+    color: rgba(205, 201, 201, 0.792);
+}
+
+.footer .row {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: 200;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    font-size: 20px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width:830px) {
+    .footer .col a {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 40px 7% 5px;
+    }
+
+    .logo {
+        width: 9rem;
+    }
+
+    .FAQ h2 {
+        font-weight: 450;
+        font-size: 35px;
+    }
+
+    .kid-section{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 1.5rem;
+    }
+    
+    .kid-section img{
+        width: 100%;
+    }
+    
+    .kid-section .detail h1{
+        font-size: 2.2em;
+        margin-bottom: 0.4em;
+    }
+    
+    .kid-section .detail p{
+        font-size: 1.1em;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row .detail h1{
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+        font-weight: bolder;
+    }
+    
+    .row .detail p{
+        font-size: 1.5em;
+        font-weight: bolder;
+        max-width: 100%;
+    }
+
+    .header {
+        height: 70vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(/Asset/bg.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 10px 8%;
+    }
+
+    .contant h1{
+        font-size: 1.6rem;
+        margin: 0.28rem;
+    }
+
+    .contant p{
+        font-size: 1rem;
+        margin: 0.28rem;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .footer .col a {
+        font-size: 15px;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .footer .col {
+        margin: auto;
+    }
+
+    .footer .co2 {
+        margin-left: 50em;
+    }
+
+    .logo {
+        width: 7rem;
+    }
+
+    button {
+        padding: 5px 14px;
+        font-size: 12px;
+        margin-left: 7px;
+    }
+
+    select {
+        font-size: 13px;
+        padding: 3px;
+    }
+
+    .FAQ h2 {
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    .FAQ small {
+        font-size: small;
+    }
+    
+    .email input {
+        height: 1.6em;
+        font-size: 12px;
+        padding-left: 3px;
+        border-radius: 4px;
+        border: 1px solid white;
+        margin: 12px;
+    }
+
+    .email-header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .email-header button{
+        width: 11rem;
+        margin-left: 12px;
+    }
+
+    .email-header input{
+        width: 10.7rem;
+    }
+
+    .row img{
+        width: 90%;
+    }
+}
+
+.Netflix {
+    margin-top: 22px;
+}
+
+#bar{
+    width: 100%;
+    height: 5px;
+    display: block;
+    background-color: #595858;
+}
